@@ -17,3 +17,10 @@ alert(result); // print : « 6 »
 var text = 'Bonjour ';
 text += 'toi';
 alert(text); // print « Bonjour toi ».
+
+
+var start = 'Bonjour ', name, end = ' !', result;
+
+name   = prompt('Quel est votre prénom ?');
+result = start + name + end;
+alert(result);
