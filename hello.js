@@ -37,3 +37,9 @@ second = prompt('Entrez le second chiffre :');
 result = parseInt(first) + parseInt(second);
 
 alert(result);
+
+// Function Confirm
+
+if (confirm('Voulez-vous exécuter le code JavaScript de cette page ?')) {
+    alert('Le code a bien été exécuté !');
+}
