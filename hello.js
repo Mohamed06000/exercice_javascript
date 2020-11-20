@@ -43,3 +43,27 @@ alert(result);
 if (confirm('Voulez-vous exécuter le code JavaScript de cette page ?')) {
     alert('Le code a bien été exécuté !');
 }
+
+// Exercice
+
+var age;
+age = prompt('Entrez votre age : ');
+
+if (age>0 && age<18) {
+    alert("Vous n'êtes pas encore majeur.")
+}
+else if (age=>18 && age<50) {
+    alert("Vous n'êtes pas encore majeur.")
+}
+else if (age=>50 && age<60){
+    alert("Vous êtes senior mais pas encore retraité.")
+}
+else if (age=>60 && age<=120){
+    alert("Vous êtes retraité, profitez de votre temps libre ! ")
+}
+else if(age>120){
+    alert("Plus de 120 ans!")
+}
+else{
+    alert("Error")
+}
