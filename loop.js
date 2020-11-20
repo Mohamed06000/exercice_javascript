@@ -1,3 +1,5 @@
+
+// With While
 var nicks = '',
     nick;
 
@@ -12,3 +14,18 @@ while (true) {
 }
 
 alert(nicks); //print all names
+
+
+// With For
+
+for (var i = 0, nicks = '', nick; true; i++) {
+    nick = prompt('Entrez un prénom :');
+
+    if (nick) {
+        nicks += nick + ' ';
+    } else {
+        break;
+    }
+}
+
+alert('Il y a ' + i + ' prénoms :\n\n' + nicks);
