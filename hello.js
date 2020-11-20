@@ -47,7 +47,7 @@ if (confirm('Voulez-vous exécuter le code JavaScript de cette page ?')) {
 // Exercice
 
 var age;
-age = prompt('Entrez votre age : ');
+age = parseInt(prompt('Entrez votre age : '));
 
 if (age>0 && age<18) {
     alert("Vous n'êtes pas encore majeur.")
