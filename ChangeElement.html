@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a id="myLink" href="http://www.un_lien_quelconque.com">Un lien modifié dynamiquement</a>
+
+    <script>
+        var link = document.getElementById('myLink');
+        var href = link.getAttribute('href'); // get « href »
+
+        alert(href);
+
+        link.setAttribute('href', 'http://www.siteduzero.com'); // change « href »
+    </script>
+</body>
+</html>
