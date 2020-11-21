@@ -16,3 +16,12 @@ myArray_a.pop(); // delete « Ludovic » in the end of array
 myArray_a.unshift('Ludovic'); // add « Ludovic » beginning of array
 
 myArray_a.shift(); // delete « Ludovic » in the beginning of the array
+
+
+// Browse list
+
+for (var i = 0; i < myArray_a.length; i++) {
+
+    alert(myArray_a[i]);
+
+}
