@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercice 1 - DOM</title>
+</head>
+<body>
+
+    <script>
+
+        //DIV
+        var divEl = document.createElement("div");
+        var divText1 = document.createTextNode("Le ");
+        divEl.id = "divTP";
+        divEl.appendChild(divText1);
+
+        //STRONG1
+        var strong1 = document.createElement("strong");
+        var strong1Text = document.createTextNode("World Wide Web Consortium");
+        strong1.appendChild(strong1Text);
+
+        //STRONG1 in DIV
+        divEl.appendChild(strong1);
+
+        //TEXT IN DIV
+        var divText2 = document.createTextNode(", abrégé par le signe ");
+        divEl.appendChild(divText2);
+
+        //STRONG2
+        var strong2 = document.createElement("strong");
+        var strong2Text = document.createTextNode("W3C");
+        strong2.appendChild(strong2Text);
+
+        //STRONG2 in DIV
+        divEl.appendChild(strong2);
+
+        //TEXT IN DIV
+        var divText3 = document.createTextNode(", est un ");
+        divEl.appendChild(divText3);
+
+        //a1
+        var a1 = document.createElement("a");
+        a1.href = "http://fr.wikipedia.org/wiki/Organisme_de_normalisation";
+        a1.title = "Organisme de normalisation";
+        var a1Text = document.createTextNode("organisme de standardisation");
+        a1.appendChild(a1Text);
+
+        //a1 in DIV
+        divEl.appendChild(a1);
+
+        //TEXT IN DIV
+        var divText4 = document.createTextNode(" à but non-lucratif chargé de promouvoir la compatibilité des technologies du ");
+        divEl.appendChild(divText4);
+
+        //a2
+        var a2 = document.createElement("a");
+        a2.href = "http://fr.wikipedia.org/wiki/World_Wide_Web";
+        a2.title = "World Wide Web";
+        var a2Text = document.createTextNode("World Wide Web");
+        a2.appendChild(a2Text);
+
+        //a2 in DIV
+        divEl.appendChild(a2);
+
+        //div in body
+        document.body.appendChild(divEl);
+
+
+    </script>
+</body>
+</html>
