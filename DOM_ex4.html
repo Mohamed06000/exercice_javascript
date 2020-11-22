@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excercice 4 - DOM</title>
+</head>
+<body>
+    <script>
+
+        //DIV 1
+        var divEl = document.createElement("div");
+        divEl.id = "divTP4";
+
+        var formEl = document.createElement("form");
+        formEl.enctype = "multipart/form-data";
+        formEl.method = "post";
+        formEl.action = "upload.php";
+
+        var fieldsetEl = document.createElement("fieldset");
+
+        var legendEl = document.createElement("legend");
+        var legendText = document.createTextNode("Uploader une image");
+        legendEl.appendChild(legendText);
+
+        //DIV 2
+        var divEl2 = document.createElement("div");
+        divEl2.style = "text-align: center";
+
+        var labelEl = document.createElement("label");
+        labelEl.htmlFor = "inputUpload";
+        var labelText = document.createTextNode("Image à uploader :");
+        labelEl.appendChild(labelText);
+
+        var inputEl = document.createElement("input");
+        inputEl.type = "file";
+        inputEl.name = "inputUpload";
+        inputEl.id = "inputUpload";
+
+        var brEl = document.createElement("br");
+
+        var inputEl2 = document.createElement("input");
+        inputEl.type = "submit";
+        inputEl.value = "Envoyer";
+
+        //Affect
+
+        divEl2.appendChild(labelEl);
+        divEl2.appendChild(inputEl);
+        divEl2.appendChild(brEl.cloneNode(false));
+        divEl2.appendChild(inputEl2);
+
+        fieldsetEl.appendChild(legendEl);
+        fieldsetEl.appendChild(divEl2);
+
+        formEl.appendChild(fieldsetEl);
+
+        divEl.appendChild(formEl);
+
+
+        document.body.appendChild(divEl);
+
+
+    </script>
+</body>
+</html>
