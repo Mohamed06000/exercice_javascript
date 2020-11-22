@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="myDiv">
-        <p>Un peu de texte <a>et un lien</a></p>
+        <p id="myP">Un peu de texte <a>et un lien</a></p>
     </div>
 
     <script>
@@ -15,11 +15,26 @@
         alert(div);*/
 
        //Get by tag name
-       var divs = document.getElementsByTagName('div');
+       /*var divs = document.getElementsByTagName('div');
 
        for (var i = 0, c = divs.length ; i < c ; i++) {
            alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
-       }
+       }*/
+
+        //Add html element
+
+        var newLink = document.createElement('a'); //create element
+        var newLinkText = document.createTextNode("Le Site du Zéro"); //create text of element
+
+        //affect properties
+        newLink.id = 'sdz_link';
+        newLink.href = 'http://www.siteduzero.com';
+        newLink.title = 'Découvrez le Site du Zéro !';
+        newLink.setAttribute('tabindex', '10');
+
+        newLink.appendChild(newLinkText); //add text to element
+
+        document.getElementById('myP').appendChild(newLink); //add element+text to html
 
     </script>
 </body>
