@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 2 - DOM</title>
+</head>
+<body>
+    <script>
+
+        //TEXTS
+        var textNodes = [
+            document.createTextNode("Langages basés sur ECMAScript :"),
+            document.createTextNode("JavaScript"),
+            document.createTextNode("JScript"),
+            document.createTextNode("ActionScript"),
+            document.createTextNode("EX4"),
+        ];
+
+        //ELEMENTS
+        var divEl = document.createElement("div");
+        divEl.id = "divTP2";
+
+        var pEl = document.createElement("p");
+        pEl.appendChild(textNodes[0]);
+
+        var ulEl = document.createElement("ul");
+        for (let i = 1; i < textNodes.length; i++) {
+            var li = document.createElement("li");
+            li.appendChild(textNodes[i]);
+            ulEl.appendChild(li);
+        }
+
+        //Affect
+        divEl.appendChild(pEl);
+        divEl.appendChild(ulEl);
+
+        document.body.appendChild(divEl);
+    </script>
+</body>
+</html>
