@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event object</title>
+</head>
+<body>
+    <span id="clickme">Cliquez-moi !</span>
+
+    <script>
+        var clickme = document.getElementById('clickme');
+
+        clickme.addEventListener('click', function(e) {
+            e.target.innerHTML = 'Vous avez cliqué !';
+            alert(e.type);
+        });
+    </script>
+
+
+    <p id="result"></p>
+
+    <div id="parent1">
+        Parent
+        <div id="child1">Enfant N°1</div>
+        <div id="child2">Enfant N°2</div>
+    </div>
+
+    <script>
+        var parent1 = document.getElementById('parent1'),
+            result = document.getElementById('result');
+
+        parent1.addEventListener('mouseover', function(e) {
+            result.innerHTML = "L'élément déclencheur de l'événement \"mouseover\" possède l'ID : " + e.currentTarget.id;
+        });
+    </script>
+
+
+    <div id="position"></div>
+
+    <script>
+        var position = document.getElementById('position');
+
+        document.addEventListener('mousemove', function(e) {
+            position.innerHTML = 'Position X : ' + e.clientX + 'px<br />Position Y : ' + e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
