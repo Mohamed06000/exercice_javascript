@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit CSS</title>
+</head>
+<body>
+
+    <style>
+        #text {
+            color: red;
+        }
+    </style>
+
+    <span id="text"></span>
+
+    <script>
+        var text = document.getElementById('text'),
+            color = getComputedStyle(text).color;
+
+        alert(color);
+    </script>
+</body>
+</html>
