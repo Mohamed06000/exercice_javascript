@@ -24,8 +24,13 @@
         var seb = new Person('Sébastien', 23, 'm', 'aîné', 'JavaScripteur', []);
         var lau = new Person('Laurence', 19, 'f', 'soeur', 'Sous-officier', []);
 
-        alert(seb.nick); // Affiche : « Sébastien »
-        alert(lau.nick); // Affiche : « Laurence »
+        alert(seb.nick); // print : « Sébastien »
+        alert(lau.nick); // print : « Laurence »
+
+        //Change informations
+
+        seb.nick = 'Bastien'; // change name
+        seb.age = 18;
     </script>
 </body>
 </html>
