@@ -24,6 +24,13 @@
             };
         }
 
+        //add method by prototype
+
+        Person.prototype.addFriend = function(nick, age, sex, parent, work, friends) {
+            this.friends.push(new Person(nick, age, sex, parent, work, friends));
+        }
+
+        
         //intance of object
 
         var seb = new Person('Sébastien', 23, 'm', 'aîné', 'JavaScripteur', []);
