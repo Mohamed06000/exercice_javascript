@@ -30,7 +30,7 @@
             this.friends.push(new Person(nick, age, sex, parent, work, friends));
         }
 
-        
+
         //intance of object
 
         var seb = new Person('Sébastien', 23, 'm', 'aîné', 'JavaScripteur', []);
@@ -43,6 +43,16 @@
 
         seb.nick = 'Bastien'; // change name
         seb.age = 18;
+
+        //setup namespace
+
+        var myNamespace = {
+            myBestFunction: function() {
+                alert('Ma meilleure fonction !');
+            }
+        };
+
+        myNamespace.myBestFunction();
     </script>
 </body>
 </html>
