@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex</title>
+</head>
+<body>
+    <script>
+        //setup regex
+        var myRegex = /contenu_à_rechercher/;
+
+        //search test
+        if (/contenu_à_rechercher/.test('Chaîne de caractères bla bla bla'));
+
+        //exemple
+        if (/raclette/.test('Je mangerais bien une raclette savoyarde !')) {
+            alert('Ça semble parler de raclette');
+        } else {
+            alert('Pas de raclette à l\'horizon');
+        }
+    </script>
+</body>
+</html>
