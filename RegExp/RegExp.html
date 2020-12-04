@@ -25,6 +25,15 @@
         } else {
             alert('Pas de plats légers à l\'horizon');
         }
+
+        //check mail
+        var email = prompt("Entrez votre adresse e-mail :", "javascript@siteduzero.com");
+
+        if (/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(email)) {
+            alert("Adresse e-mail valide !");
+        } else {
+            alert("Adresse e-mail invalide !");
+        }
     </script>
 </body>
 </html>
