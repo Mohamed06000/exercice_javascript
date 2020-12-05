@@ -48,6 +48,13 @@
         } else {
             alert('Adresse e-mail invalide !');
         }
+
+        //non-greedy
+        var html = '<a href="www.mon-adresse.be"><strong class="web">Mon site</strong></a>';
+
+        /<a href="(.+?)">/.exec(html);
+
+        alert(RegExp.$1);
     </script>
 </body>
 </html>
