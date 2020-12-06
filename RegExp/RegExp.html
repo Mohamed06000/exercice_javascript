@@ -55,6 +55,13 @@
         /<a href="(.+?)">/.exec(html);
 
         alert(RegExp.$1);
+
+        //replace string with regex
+        var sentence = 'Je m\'appelle Sébastien';
+
+        var result = sentence.replace(/Sébastien/, 'Johann');
+
+        alert(result); // Affiche : « Je m'appelle Johann »
     </script>
 </body>
 </html>
