@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        var obj = {
+                index: 'contenu'
+            },
+            string;
+
+        string = JSON.stringify(obj);
+
+        alert(typeof string + ' : ' + string); // Affiche : « string : {"index":"contenu"} »
+
+        obj = JSON.parse(string);
+
+        alert(typeof obj + ' : ' + obj); // Affiche : « object : [object Object] »
+    </script>
+
+</body>
+</html>
