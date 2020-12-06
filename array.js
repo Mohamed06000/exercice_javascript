@@ -25,3 +25,19 @@ for (var i = 0; i < myArray_a.length; i++) {
     alert(myArray_a[i]);
 
 }
+
+//concat
+
+var myArray = ['test1', 'test2'].concat(['test3', 'test4']);
+alert(myArray);
+
+//foreach
+
+var myArray = ["C'est", "un", "test"];
+
+myArray.forEach(function(value, index, array) {
+    alert(
+        'Index : ' + index + '\n' +
+        'Valeur : ' + value
+    );
+});
