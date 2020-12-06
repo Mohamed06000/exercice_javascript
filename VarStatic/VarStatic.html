@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Var Static</title>
+</head>
+<body>
+    <script>
+        var display = (function() {
+
+            var myVar = 0; // Déclaration de la variable pseudo-statique
+
+            return function(value) {
+
+                if (typeof value != 'undefined') {
+                    myVar = value;
+                }
+
+                alert(myVar);
+
+            };
+
+        })();
+
+        display(); // Affiche : 0
+        display(42); // Affiche : 42
+        display(); // Affiche : 42
+    </script>
+</body>
+</html>
