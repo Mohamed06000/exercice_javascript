@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+        var myDate = new Date('Sat, 04 May 1991 20:00:00 GMT+02:00');
+
+        alert(myDate.getMonth()); // Affiche : 4
+        alert(myDate.getDay()); // Affiche : 6
+
+
+        //time of execution
+        var firstTimestamp = new Date().getTime(); // On obtient le timestamp avant l'exécution
+
+        slow(); // La fonction travaille…
+
+        var secondTimestamp = new Date().getTime(), // On récupère le timestamp après l'exécution
+            result = secondTimestamp - firstTimestamp; // On fait la soustraction
+
+        alert("Le temps d'exécution est de : " + result + " millisecondes.");
+    </script>
+</body>
+</html>
