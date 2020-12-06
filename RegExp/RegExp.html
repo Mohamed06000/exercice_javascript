@@ -62,6 +62,13 @@
         var result = sentence.replace(/Sébastien/, 'Johann'); //var result = sentence.replace(/Sébastien/g, 'Johann'); g for more repetition
 
         alert(result); // Affiche : « Je m'appelle Johann »
+
+        //BBCode to HTML
+        var text = 'bla bla [b]un peu de texte[/b] bla [b]bla bla en gras[/b] bla bla';
+
+        text = text.replace(/\[b\]([\s\S]*?)\[\/b\]/g, '<strong>$1</strong>');
+
+        alert(text);
     </script>
 </body>
 </html>
