@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XLMHTTPREQUEST</title>
+</head>
+<body>
+    <script>
+
+        //SEND DATA
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://mon_site_web.com/ajax.php');
+        xhr.send(null);
+
+        //param with GET
+        var value1 = encodeURIComponent(value1),
+            value2 = encodeURIComponent(value2);
+
+        xhr.open('GET', 'http://mon_site_web.com/ajax.php?param1=' + value1 + '&param2=' + value2);
+
+        //param with POST
+        xhr.open('POST', 'http://mon_site_web.com/ajax.php');
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send('param1=' + value1 + '&param2=' + value2);
+
+        //GET DATA
+
+        //asynchron
+        xhr.addEventListener('readystatechange', function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Votre code…
+            }
+        });
+
+        //synchron
+        xhr.addEventListener('readystatechange', function() {
+            if (xhr.status === 200) {
+                // Votre code…
+            }
+        });
+    </script>
+</body>
+</html>
